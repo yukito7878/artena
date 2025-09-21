@@ -25,7 +25,7 @@ const hero = document.querySelector('.hero');
 if (hero) {
 	const path = document.body.dataset.hero;
 	if (path) {
-		hero.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.0) 40%), url('${path}')`;
+		hero.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,.8), rgba(0,0,0,.6) 40%), url('${path}')`;
 		hero.style.backgroundSize = 'cover';
 		hero.style.backgroundPosition = 'center';
 	}

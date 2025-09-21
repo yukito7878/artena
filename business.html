@@ -12,7 +12,7 @@
 	<meta name="description" content="Artenaの事業内容、商品カテゴリー、仕入れ・品質方針をご紹介します。">
 </head>
 
-<body>
+<body data-hero="./assets/img/hero.png">
 
 	<header class="header">
 		<div class="header-inner container">
@@ -72,14 +72,61 @@
 		</div>
 	</section>
 
-	<section class="section">
-		<div class="container">
-			<h3>事業内容 / コンセプト</h3>
-			<p>国内外のハンドメイド製品をセレクトし、ECモールを中心に販売します。日常に自然に取り入れられるファッション雑貨・インテリア・ライフスタイル製品に特化します。</p>
-			<div class="grid cols-2" style="margin-top:18px">
-				<img src="./assets/img/category2.svg" alt="バッグ カテゴリー画像">
-				<img src="./assets/img/category3.svg" alt="インテリア雑貨 カテゴリー画像">
+	<section class="section concept">
+		<div class="container concept-wrap">
+			<div class="concept-intro">
+				<h3>事業内容 / コンセプト</h3>
+				<p class="lead">
+					“世界のハンドメイドを、暮らしの一部に”。<br>
+					国内外のクリエイターと協業し、日常づかいに美しく馴染む
+					ファッション雑貨とライフスタイル製品をセレクトします。
+				</p>
+
+				<div class="pillars">
+					<div class="pillar">
+						<span class="badge num">01</span>
+						<div>
+							<h4>セレクト基準</h4>
+							<p>日常性×デザイン性×素材感。長く使えることを前提に。</p>
+						</div>
+					</div>
+					<div class="pillar">
+						<span class="badge num">02</span>
+						<div>
+							<h4>サステナビリティ</h4>
+							<p>小規模工房の技術継承・適正価格・ローカル生産の尊重。</p>
+						</div>
+					</div>
+					<div class="pillar">
+						<span class="badge num">03</span>
+						<div>
+							<h4>品質管理</h4>
+							<p>二重検品とマルチソースで安定供給＆不良率の最小化。</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="concept-tags">
+					<span class="chip">アクセサリー</span>
+					<span class="chip">バッグ</span>
+					<span class="chip">ファブリック</span>
+					<span class="chip">セラミック</span>
+					<span class="chip">木工</span>
+				</div>
 			</div>
+
+			<aside class="concept-visual">
+				<!-- 大きめ1枚 + 小さめ3枚のモザイク。比率固定&自動トリミング -->
+				<figure class="hero-thumb">
+					<img src="./assets/img/bag.png" alt="バッグ カテゴリー画像">
+					<figcaption>Daily Utility, Quiet Design</figcaption>
+				</figure>
+				<div class="thumb-grid">
+					<img src="./assets/img/wood.png" alt="木製小物・家具" class="thumb">
+					<img src="./assets/img/bag.png" alt="バッグ" class="thumb">
+					<img src="./assets/img/wood.png" alt="インテリア雑貨" class="thumb">
+				</div>
+			</aside>
 		</div>
 	</section>
 
@@ -87,27 +134,27 @@
 		<div class="container">
 			<h3>取扱商品カテゴリー</h3>
 			<div class="grid cols-3">
-				<article class="card"><img src="./assets/img/product4.svg" alt="アクセサリー">
+				<article class="card"><img src="./assets/img/parlNeckless.png" alt="アクセサリー">
 					<h4>アクセサリー</h4>
 					<p class="note">ピアス・ネックレス</p>
 				</article>
-				<article class="card"><img src="./assets/img/product5.svg" alt="デザインキャンドル">
+				<article class="card"><img src="./assets/img/cabdle.png" alt="デザインキャンドル">
 					<h4>デザインキャンドル</h4>
 					<p class="note">インテリアのアクセントに</p>
 				</article>
-				<article class="card"><img src="./assets/img/product6.svg" alt="ファブリック雑貨">
+				<article class="card"><img src="./assets/img/branquet.png" alt="ファブリック雑貨">
 					<h4>ファブリック雑貨</h4>
 					<p class="note">クッションカバー・ポーチ</p>
 				</article>
-				<article class="card"><img src="./assets/img/category4.svg" alt="ハンドメイドハット">
+				<article class="card"><img src="./assets/img/hat.png" alt="ハンドメイドハット">
 					<h4>ハンドメイドハット</h4>
 					<p class="note">フェルト・コットン</p>
 				</article>
-				<article class="card"><img src="./assets/img/category1.svg" alt="バッグ">
+				<article class="card"><img src="./assets/img/bag.png" alt="バッグ">
 					<h4>バッグ</h4>
 					<p class="note">トート / ショルダー</p>
 				</article>
-				<article class="card"><img src="./assets/img/category3.svg" alt="マグ・花瓶・家具">
+				<article class="card"><img src="./assets/img/cup.png" alt="マグ・花瓶・家具">
 					<h4>ライフスタイル</h4>
 					<p class="note">セラミックマグ・花瓶・木製家具 etc.</p>
 				</article>
@@ -115,19 +162,13 @@
 		</div>
 	</section>
 
-	<section class="section">
-		<div class="container">
-			<h3>仕入れ・品質方針</h3>
-			<ul>
-				<li>国内はハンドメイド作家・小規模工房と直接契約、定期納品体制を構築。</li>
-				<li>海外はBtoBプラットフォームや現地工房から複数仕入先を確保し、納期・品質リスクを分散。</li>
-				<li>初回サンプル検品＋国内倉庫で再検品を徹底し、不良率を最小化。</li>
-				<li>特定サプライヤーへの依存を避け、カテゴリ別に供給元を複数確保。</li>
-				<li>為替変動に応じて仕入れ比率・価格を調整し、利益率を維持。</li>
-			</ul>
-			<p class="note">販売チャネル：楽天市場 / Yahoo!ショッピング / Amazon。将来的に自社EC（Shopify）を開設。</p>
-		</div>
-	</section>
+	<ol class="policy-steps">
+		<li><strong>契約・体制</strong> 作家／工房と直接契約し定期納品体制を整備</li>
+		<li><strong>調達分散</strong> 海外も含め複数仕入先を確保しリスクを分散</li>
+		<li><strong>品質管理</strong> サンプル＋国内再検品で不良率を最小化</li>
+		<li><strong>依存回避</strong> カテゴリ別にマルチソースを構築</li>
+		<li><strong>収益管理</strong> 為替と原価に応じた価格調整で利益率維持</li>
+	</ol>
 
 
 	<footer class="footer">
@@ -155,6 +196,6 @@
 	</footer>
 
 	<script src="app.js"></script>
-</body>
+</body data-hero="./assets/img/hero.png">
 
 </html>
