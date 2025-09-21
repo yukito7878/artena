@@ -8,26 +8,38 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+	<script>document.documentElement.classList.add('fx-enter');</script>
 	<link rel="stylesheet" href="style.css">
 	<meta name="description" content="Artenaの事業内容、商品カテゴリー、仕入れ・品質方針をご紹介します。">
 </head>
 
 <body data-hero="./assets/img/hero.png">
+	<!-- Transition overlay -->
+	<div id="page-fx" aria-hidden="true"></div>
 
-	<header class="header">
-		<div class="header-inner container">
+	<header class="site-header">
+		<div class="container header-bar">
 			<a class="brand" href="index.html" aria-label="Artena Home">
-				<span class="logo"></span>
-				<h1>Artena</h1>
+				<span class="logo" aria-hidden="true"></span>
+				<span class="brand-text">Artena</span>
 			</a>
-			<button class="menu-btn" aria-label="Menu">Menu</button>
-			<nav class="nav" aria-label="Main Navigation">
-				<a href="index.html">トップ</a>
-				<a href="business.html">事業内容</a>
-				<a href="contact.html">お問い合わせ</a>
+
+			<!-- モバイルメニュー（チェックボックス方式：JS不要） -->
+			<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+			<label for="nav-toggle" class="hamburger" aria-label="メニューを開閉">
+				<span></span><span></span><span></span>
+			</label>
+
+			<nav class="site-nav" aria-label="Main Navigation">
+				<ul>
+					<li><a href="index.html" class="nav-link">トップ</a></li>
+					<li><a href="business.html" class="nav-link">事業内容</a></li>
+					<li><a href="contact.html" class="nav-link">お問い合わせ</a></li>
+				</ul>
 			</nav>
 		</div>
 	</header>
+
 	<section class="hero">
 		<div class="inner container">
 			<span class="kicker">Handmade & Lifestyle</span>
@@ -118,13 +130,13 @@
 			<aside class="concept-visual">
 				<!-- 大きめ1枚 + 小さめ3枚のモザイク。比率固定&自動トリミング -->
 				<figure class="hero-thumb">
-					<img src="./assets/img/bag.png" alt="バッグ カテゴリー画像">
+					<img src="./assets/img/businessHero.png" alt="バッグ カテゴリー画像">
 					<figcaption>Daily Utility, Quiet Design</figcaption>
 				</figure>
 				<div class="thumb-grid">
-					<img src="./assets/img/wood.png" alt="木製小物・家具" class="thumb">
-					<img src="./assets/img/bag.png" alt="バッグ" class="thumb">
-					<img src="./assets/img/wood.png" alt="インテリア雑貨" class="thumb">
+					<img src="./assets/img/businessSub1.png" alt="木製小物・家具" class="thumb">
+					<img src="./assets/img/businessSub2.png" alt="バッグ" class="thumb">
+					<img src="./assets/img/businesssub3.png" alt="インテリア雑貨" class="thumb">
 				</div>
 			</aside>
 		</div>
@@ -196,6 +208,8 @@
 	</footer>
 
 	<script src="app.js"></script>
-</body data-hero="./assets/img/hero.png">
+	<script src="transition.js"></script>
+
+</body>
 
 </html>

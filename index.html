@@ -8,26 +8,38 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+	<script>document.documentElement.classList.add('fx-enter');</script>
 	<link rel="stylesheet" href="style.css">
 	<meta name="description" content="国内外のハンドメイドアクセサリー・ライフスタイル雑貨をセレクト。Artena 公式サイト。">
 </head>
 
 <body data-hero="./assets/img/hero.png">
+	<!-- Transition overlay -->
+	<div id="page-fx" aria-hidden="true"></div>
 
-	<header class="header">
-		<div class="header-inner container">
+	<header class="site-header">
+		<div class="container header-bar">
 			<a class="brand" href="index.html" aria-label="Artena Home">
-				<span class="logo"></span>
-				<h1>Artena</h1>
+				<span class="logo" aria-hidden="true"></span>
+				<span class="brand-text">Artena</span>
 			</a>
-			<button class="menu-btn" aria-label="Menu">Menu</button>
-			<nav class="nav" aria-label="Main Navigation">
-				<a href="index.html">トップ</a>
-				<a href="business.html">事業内容</a>
-				<a href="contact.html">お問い合わせ</a>
+
+			<!-- モバイルメニュー（チェックボックス方式：JS不要） -->
+			<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+			<label for="nav-toggle" class="hamburger" aria-label="メニューを開閉">
+				<span></span><span></span><span></span>
+			</label>
+
+			<nav class="site-nav" aria-label="Main Navigation">
+				<ul>
+					<li><a href="index.html" class="nav-link">トップ</a></li>
+					<li><a href="business.html" class="nav-link">事業内容</a></li>
+					<li><a href="contact.html" class="nav-link">お問い合わせ</a></li>
+				</ul>
 			</nav>
 		</div>
 	</header>
+
 
 	<section class="hero">
 		<div class="inner container">
@@ -70,7 +82,7 @@
 
 	<section class="section">
 		<div class="container feature">
-			<img src="./assets/img/category1.svg" alt="アクセサリー カテゴリー画像">
+			<img src="./assets/img/srtifact.png" alt="アクセサリー カテゴリー画像">
 			<div>
 				<h3>つくり手の想いを、あなたの日常へ</h3>
 				<p>国内外のクリエイターからセレクト。小ロット・受注生産にも対応し、検品を徹底して品質をお届けします。</p>
@@ -107,6 +119,8 @@
 	</footer>
 
 	<script src="app.js"></script>
+	<script src="transition.js"></script>
+
 </body>
 
 </html>
