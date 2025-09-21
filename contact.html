@@ -11,6 +11,9 @@
 	<script>document.documentElement.classList.add('fx-enter');</script>
 	<link rel="stylesheet" href="style.css">
 	<meta name="description" content="Artenaへのお問い合わせ。メールフォーム・連絡先情報。">
+	<!-- ▼ ファビコン設定 ▼ -->
+	<link rel="icon" href="favicon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="assets/img/favicon.png">
 </head>
 
 <body>
@@ -49,7 +52,7 @@
 				<input class="input" type="email" name="email" placeholder="メールアドレス" required>
 				<textarea class="textarea" name="message" placeholder="お問い合わせ内容" required></textarea>
 				<button class="btn primary" type="submit">送信</button>
-				<div class="note">またはメール：<a href="mailto:info@example.com">info@example.com</a></div>
+				<div class="note">またはメール：<a href="mailto:altcommand.online@gmail.com">altcommand.online@gmail.com</a></div>
 			</form>
 
 		</div>
@@ -89,7 +92,7 @@
 			</div>
 			<div>
 				<div class="badge">お問い合わせ</div>
-				<div class="note"><a href="mailto:info@example.com">info@example.com</a></div>
+				<div class="note"><a href="mailto:info@example.com">altcommand.online@gmail.com</a></div>
 			</div>
 		</div>
 		<div class="container" style="margin-top:20px">
@@ -107,7 +110,7 @@
 			form.addEventListener('submit', function (e) {
 				e.preventDefault();
 
-				const to = 'info@example.com'; // 宛先を必要に応じて変更
+				const to = 'altcommand.online@gmail.com'; // 宛先を必要に応じて変更
 				const name = (form.elements['name'].value || '').trim();
 				const email = (form.elements['email'].value || '').trim();
 				const message = (form.elements['message'].value || '').trim();
