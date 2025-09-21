@@ -1,0 +1,366 @@
+/* ------------------------------
+   Artena Minimal Chic Theme
+   - Modern, clean, fashion-forward
+   - Easy to customize with CSS variables
+--------------------------------- */
+:root {
+	--bg: #ffffff;
+	--text: #1a1a1a;
+	--muted: #6b6b6b;
+	--line: #e8e8e8;
+	--brand: #111;
+	--accent: #b89c7d;
+	/* warm champagne */
+	--radius: 14px;
+	--max: 1200px;
+	--hero-img: url('./assets/img/hero.svg');
+	/* change to your image path */
+	--shadow: 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+* {
+	box-sizing: border-box
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font: 16px/1.6 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	letter-spacing: .02em;
+}
+
+a {
+	color: inherit;
+	text-decoration: none
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-radius: var(--radius)
+}
+
+.container {
+	width: 100%;
+	max-width: var(--max);
+	margin-inline: auto;
+	padding: 0 20px
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background: #fffcc;
+	/* overridden below */
+	backdrop-filter: saturate(180%) blur(10px);
+	background: rgba(255, 255, 255, .8);
+	border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 20px
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 14px
+}
+
+.brand .logo {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: conic-gradient(from 45deg, #222, #444, #000);
+	box-shadow: var(--shadow);
+}
+
+.brand h1 {
+	font-size: 18px;
+	margin: 0;
+	letter-spacing: .08em;
+	text-transform: uppercase
+}
+
+.nav {
+	display: flex;
+	gap: 22px;
+	align-items: center
+}
+
+.nav a {
+	padding: 8px 10px;
+	border-radius: 10px
+}
+
+.nav a:hover {
+	background: #f6f6f6
+}
+
+.menu-btn {
+	display: none
+}
+
+@media (max-width:860px) {
+	.nav {
+		position: fixed;
+		inset: 60px 0 auto;
+		background: #fff;
+		padding: 16px;
+		border-bottom: 1px solid var(--line);
+		transform: translateY(-120%);
+		transition: .3s
+	}
+
+	.nav.open {
+		transform: none
+	}
+
+	.menu-btn {
+		display: block;
+		border: 1px solid var(--line);
+		padding: 8px 12px;
+		border-radius: 10px;
+		background: #fff
+	}
+}
+
+.hero {
+	min-height: 74vh;
+	display: grid;
+	align-items: end;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(180deg, rgba(0, 0, 0, .35), rgba(0, 0, 0, .0) 40%),
+		var(--hero-img) center/cover no-repeat, #000;
+	color: #fff;
+}
+
+.hero .inner {
+	padding: 10vh 0 8vh
+}
+
+.kicker {
+	display: inline-block;
+	padding: 6px 10px;
+	border: 1px solid rgba(255, 255, 255, .4);
+	border-radius: 999px;
+	font-size: 12px;
+	letter-spacing: .12em;
+	text-transform: uppercase
+}
+
+h2 {
+	font-size: 40px;
+	line-height: 1.15;
+	margin: 14px 0 12px
+}
+
+p.lead {
+	font-size: 18px;
+	opacity: .92;
+	max-width: 680px
+}
+
+.cta-row {
+	display: flex;
+	gap: 12px;
+	margin-top: 18px
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	border-radius: 999px;
+	padding: 12px 18px;
+	box-shadow: var(--shadow);
+	border: 1px solid var(--line);
+	background: #fff;
+	color: #111;
+	font-weight: 600
+}
+
+.btn.primary {
+	background: var(--accent);
+	color: #fff;
+	border: none
+}
+
+.btn.ghost {
+	background: transparent;
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, .5)
+}
+
+.section {
+	padding: 72px 0;
+	border-top: 1px solid var(--line)
+}
+
+.section h3 {
+	font-size: 28px;
+	margin: 0 0 14px
+}
+
+.section p {
+	color: var(--muted)
+}
+
+.grid {
+	display: grid;
+	gap: 26px
+}
+
+.grid.cols-3 {
+	grid-template-columns: repeat(3, 1fr)
+}
+
+.grid.cols-2 {
+	grid-template-columns: repeat(2, 1fr)
+}
+
+@media (max-width:900px) {
+	.grid.cols-3 {
+		grid-template-columns: 1fr 1fr
+	}
+}
+
+@media (max-width:640px) {
+
+	.grid.cols-3,
+	.grid.cols-2 {
+		grid-template-columns: 1fr
+	}
+}
+
+.card {
+	padding: 16px;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: #fff
+}
+
+.card .meta {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: var(--muted);
+	font-size: 13px
+}
+
+.price {
+	font-weight: 700;
+}
+
+.feature {
+	display: grid;
+	gap: 28px;
+	grid-template-columns: 420px 1fr;
+	align-items: center;
+}
+
+@media (max-width:960px) {
+	.feature {
+		grid-template-columns: 1fr
+	}
+}
+
+.footer {
+	padding: 40px 0;
+	border-top: 1px solid var(--line);
+	color: #777;
+	font-size: 14px
+}
+
+.footer .cols {
+	display: grid;
+	gap: 26px;
+	grid-template-columns: 2fr 1fr 1fr
+}
+
+@media (max-width:900px) {
+	.footer .cols {
+		grid-template-columns: 1fr 1fr
+	}
+}
+
+@media (max-width:600px) {
+	.footer .cols {
+		grid-template-columns: 1fr
+	}
+}
+
+.badge {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 999px;
+	background: #f7f7f7;
+	color: #555;
+	font-size: 12px
+}
+
+.form {
+	display: grid;
+	gap: 16px;
+	max-width: 640px
+}
+
+.input,
+.textarea {
+	width: 100%;
+	padding: 14px 16px;
+	border-radius: 12px;
+	border: 1px solid var(--line);
+	background: #fff;
+}
+
+.textarea {
+	min-height: 140px;
+	resize: vertical
+}
+
+input:focus,
+textarea:focus {
+	outline: 2px solid #e9dfd2;
+	border-color: #e9dfd2
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 14px
+}
+
+.table th,
+.table td {
+	padding: 12px;
+	border-bottom: 1px solid var(--line);
+	text-align: left
+}
+
+.table th {
+	font-weight: 600;
+	color: #333
+}
+
+.note {
+	font-size: 13px;
+	color: #777
+}
+
+:target {
+	scroll-margin-top: 100px
+}
